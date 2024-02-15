@@ -12,20 +12,28 @@ import { MARComponent } from './mar/mar.component';
 import { HAFComponent } from './haf/haf.component';
 import { HafdisplayComponent } from './hafdisplay/hafdisplay.component';
 import { Home2Component } from './home2/home2.component';
+import { IaoComponent } from './iao/iao.component';
+import { ImmunizationComponent } from './immunization/immunization.component';
+import { RadioComponent } from './radio/radio.component';
+import { LabtestComponent } from './labtest/labtest.component';
 
 export const routes: Routes = [
   { path: '', component: Home2Component },
   { path: 'forms', component: FormsComponent },
   { path: 'records', component: RecordsComponent },
-  { path: 'records/registrations', component: RegdisplayComponent},
-  {path: 'vitals', component: VitalsheetComponent},
-  { path:'emr', component: EMRComponent },
-  { path:'mar', component: MARComponent },
+  { path: 'records/registrations', component: RegdisplayComponent },
+  { path: 'vitals', component: VitalsheetComponent },
+  { path: 'emr', component: EMRComponent },
+  { path: 'mar', component: MARComponent },
   { path: 'records/haf', component: HafdisplayComponent },
   { path: 'haf', component: HAFComponent },
   { path: 'members/team', component: MembersComponent },
   { path: 'about', component: AboutComponent },
   { path: 'medical-diagnosis', component: NotesComponent },
   { path: 'about-us', component: AboutComponent },
+  { path: 'input', component: IaoComponent },
+  { path: 'immunization', component: ImmunizationComponent },
+  { path: 'radio', component: RadioComponent },
+  { path: 'labtest', component: LabtestComponent },
   { path: '**', redirectTo: '' },
 ];

@@ -1,0 +1,81 @@
+.page-container {
+  background-image: url("/assets/mainbg.jpg"); /* Path to your background image */
+//   background-size: cover;
+  background-position: center;
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333; /* Background color for the back button */
+    text-decoration: none; /* Remove default link underline */
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #555; /* Change background color on hover */
+    }
+  }
+
+  .main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    // position: relative;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+
+    form {
+      .form-group {
+        margin-bottom: 20px;
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        input,
+        select {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          margin-top: 5px;
+        }
+      }
+
+      h2 {
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+
+      .submit {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+
+    .div {
+      margin-bottom: 20px;
+    }
+  }
+}

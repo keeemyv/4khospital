@@ -3,28 +3,7 @@
    <a class="btn btn-dark back-button" href="/">
     Back to Home
   </a>
-  <!-- <div class="card" *ngFor="let note of notes; let i = index">
-    <div class="card-body" (click)="editCard(note)">
-      <ng-container *ngIf="!editMode || note !== selectedNote; else editModeTemplate">
-        <h3 class="card-title">{{ note.title }}</h3>
-        <p class="card-text">{{ note.content }}</p>
-      </ng-container>
-      <ng-template #editModeTemplate>
-        <input type="text" [(ngModel)]="selectedNote.title" class="form-control mb-2" />
-        <textarea [(ngModel)]="selectedNote.content" class="form-control mb-2" rows="4"></textarea>
-        <button type="button" (click)="saveChanges()" class="btn btn-primary mr-2">Save</button>
-        <button type="button" (click)="cancelEdit()" class="btn btn-secondary">Cancel</button>
-      </ng-template>
-    </div>
-  </div>
-  
-  <button class="btn btn-success mt-5" *ngIf="!addMode" (click)="enterAddMode()">
-    Add Note
-  </button>
-  <button class="btn btn-dark mt-5" *ngIf="addMode" (click)="cancelAddMode()">
-    Cancel
-  </button>
-  *ngIf="addMode"  -->
+
   <form (submit)="onSubmit()" class="my-4">
     <div class="form-group">
       <label for="name">Patient Name:</label>
