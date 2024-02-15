@@ -1,0 +1,80 @@
+// styles.scss or your component's specific SCSS file
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; // Set a minimum height to center vertically
+  // background-color: #333;
+  background-image: url("/assets/mainbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .container {
+    display: flex;
+    flex-direction: row; // Set the container to a row layout
+    background-color: rgba(255, 255, 255, 0.6); // Transparent white background
+    padding: 20px;
+    border-radius: 10px; // Add rounded corners if desired
+    max-width: 788px;
+
+    .row1,
+    .row2 {
+      flex: 1; // Make each row take equal space
+      padding: 10px; // Adjust padding as needed
+    }
+
+    .row1 {
+      margin-right: 50px;
+    }
+
+    .frame {
+      font-size: 30px;
+    }
+
+    h1 {
+      // Styling for the heading
+    }
+
+    p {
+      // Styling for the paragraph
+    }
+
+    .icons,
+    .buttons {
+      // Styling for the icons/buttons list
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        // Styling for list items if needed
+      }
+
+      a {
+        // Styling for anchor tags
+        text-decoration: none;
+        color: #333; // Adjust the color as needed
+        display: block;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        background-color: #eee; // Adjust the background color as needed
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #ddd; // Adjust the hover background color as needed
+        }
+      }
+    }
+
+    .buttons {
+      max-width: 300px; // Adjust the maximum width as needed
+    }
+
+    .row2 {
+      margin-left: 10px; // Add space between row1 and row2
+    }
+  }
+}
