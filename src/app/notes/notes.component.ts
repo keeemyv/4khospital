@@ -33,21 +33,21 @@ export class NotesComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.title && this.content) {
-      this.notes.push({
-        title: this.title,
-        
-        content: this.content,
-      });
-      // Store notes in localStorage
-      localStorage.setItem('notes', JSON.stringify(this.notes));
-      this.title = '';
-      this.name = '';
-      this.content = '';
-      alert('Note has submitted successfully!');
-    } else {
-      alert('Fields cannot be blank!');
-    }
+    if (this.name == '') {
+      alert('Name cannot be blank!');
+      return;
+    } 
+    if (this.content == '') {
+      alert('Content cannot be blank!');
+      return;
+    } 
+
+
+    alert('Diagnosis has been submitted successfully!');
+    localStorage.setItem('notes', JSON.stringify(this.notes));
+    this.title = '';
+    this.name = '';
+    this.content = '';
   }
 
   enterAddMode(): void {

@@ -25,7 +25,7 @@ export const routes: Routes = [
   { path: 'health', component: HAFComponent },
   { path: 'members/team', component: MembersComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'notes', component: NotesComponent },
+  { path: 'medical-diagnosis', component: NotesComponent },
   { path: 'about-us', component: AboutComponent },
   { path: '**', redirectTo: '' },
 ];
