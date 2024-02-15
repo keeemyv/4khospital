@@ -1,243 +1,442 @@
-<app-navbar></app-navbar>
+<!-- Your Angular component HTML -->
 <div class="page-container">
   <div class="main-container">
-    <form [formGroup]="healthForm" (ngSubmit)="onSubmit()">
-      <label for="fullName" class="form-label">Full Name</label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="fullName"
-        [(ngModel)]="fullName"
-      />
-      <div *ngIf="validName" class="alert alert-danger">Name is Required!</div>
+    <form [formGroup]="myForm" #formDirective="ngForm" (ngSubmit)="onSubmit()">
+      <label class="me-2" for="">Patient Name:</label>
+      <input type="text" id="" formControlName="" />
 
-      <label for="health" class="form-label"
-        >How healthy do you consider yourself on a scale of 1 to 10?</label
-      >
-      <select
-        class="form-select form-control"
-        id="health"
-        formControlName="health"
-        [(ngModel)]="health"
-      >
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-
-      <label for="q2" class="form-label"
-        >How often do you have medical checkups?</label
-      >
-      <select
-        class="form-select form-control"
-        id="q2"
-        formControlName="q2"
-        [(ngModel)]="q2"
-      >
-        <option value="Not Often">Not Often</option>
-        <option value="Regularly">Regularly</option>
-        <option value="Very Often">Very Often</option>
-      </select>
-
-      <label for="q3" class="form-label"
-        >Have you had immunization for the past two years? What immunization and
-        when was it?</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q3"
-        [(ngModel)]="q3"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
+      <div>
+        <label class="me-2">Level of Consciousness:</label>
+        <select>
+          <option value="alert">Alert</option>
+          <option value="drowsy">Drowsy</option>
+          <option value="lethargic">Lethargic</option>
+          <option value="stupurous">Stupurous</option>
+          <option value="coma">Coma</option>
+          <!-- Add more options as needed -->
+        </select>
       </div>
 
-      <label for="q4" class="form-label"
-        >Do you have any allergies? If so, what allergies?</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q4"
-        [(ngModel)]="q4"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
+      <!-- Add more form fields as needed -->
+      <div class="row1">
+        <div class="orientation">
+          <h2>Orientation</h2>
+          <div>
+            <label for="" class="me-3"
+              ><input type="checkbox" class="me-2" /> Person:
+            </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="" class="me-3"
+              ><input type="checkbox" class="me-2" />Place:
+            </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="" class="me-3"
+              ><input type="checkbox" class="me-2" />Time:
+            </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <label for="" class="me-3"
+              ><input type="checkbox" class="me-2" />Situation:
+            </label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+
+        <div class="vitals">
+          <h2>Vitals</h2>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Temperature (C): </label>
+            <input type="number" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Respiratory Rate (bpm): </label>
+            <input type="number" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Cardiac Rate (bpm): </label>
+            <input type="number" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Blood Pressure: </label>
+            <input type="number" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">O2 Sat (%): </label>
+            <input type="number" name="" id="" />
+          </div>
+        </div>
+
+        <div class="gen-ass">
+          <h2>General Assessment</h2>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Weight (kg): </label>
+            <input type="number" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Height (cm): </label>
+            <input type="number" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">BMI: </label>
+            <input type="number" name="" id="" />
+          </div>
+        </div>
+
+        <div class="abdomen">
+          <h2>Abdomen</h2>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Inspection: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Auscultation: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">LUQ: </label>
+            <select name="" id="">
+              <option value="">None</option>
+              <option value="">Active</option>
+              <option value="">Hyper</option>
+              <option value="">Absent</option>
+            </select>
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">RUQ: </label>
+            <select name="" id="">
+              <option value="">None</option>
+              <option value="">Active</option>
+              <option value="">Hyper</option>
+              <option value="">Absent</option>
+            </select>
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">LLQ: </label>
+            <select name="" id="">
+              <option value="">None</option>
+              <option value="">Active</option>
+              <option value="">Hyper</option>
+              <option value="">Absent</option>
+            </select>
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">RLQ: </label>
+            <select name="" id="">
+              <option value="">None</option>
+              <option value="">Active</option>
+              <option value="">Hyper</option>
+              <option value="">Absent</option>
+            </select>
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Palpation: </label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+
+        <div class="upperE">
+          <h2>Upper Extremities</h2>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Radial Pulses: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Temp/Trunk (warm/cool): </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Grip equal & strong: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Capillary refill <3s: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Vein filling rapid: </label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
+
+        <div class="lowerE">
+          <h2>Lower Extremities</h2>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Hair present: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Edema: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Foot Strength: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Homain's Claudication: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Temp vs. Trunk: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Nails: </label>
+            <select name="" id="" class="me-3">
+              <option value="">None</option>
+              <option value="">Yellowed</option>
+              <option value="">Thickened</option>
+              <option value="">Ingrown</option>
+            </select>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Pedal pulse: </label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
       </div>
 
-      <label for="q5" class="form-label"
-        >Any recent major illness (physical, emotional or mental illness)?
-        Indicate what illness.</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q5"
-        [(ngModel)]="q5"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+      <!-- ///// ROW 2//////////////////////////////// -->
+      <div class="row2">
+        <div class="head">
+          <h2>Head</h2>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Hair: </label>
+            <input type="text" name="" id="" />
+          </div>
 
-      <label for="q6" class="form-label"
-        >Does hereditary illness/es run in your family? What illness/es?</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q6"
-        [(ngModel)]="q6"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Eyes: </label>
+            <input type="text" name="" id="" />
+          </div>
 
-      <label for="q7" class="form-label"
-        >Are you currently taking any medications and/or vitamins? If yes,
-        kindly indicate what medications and vitamins you take.</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q7"
-        [(ngModel)]="q7"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Nose: </label>
+            <input type="text" name="" id="" />
+          </div>
 
-      <label for="q8" class="form-label"
-        >What do you usually eat in a day? Describe the kinds of foods you
-        prefer, how often you eat throughout the day, and how much you
-        eat?</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q8"
-        [(ngModel)]="q8"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Mouth: </label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
 
-      <label for="q9" class="form-label"
-        >How much and what types of fluids do you drink?</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q9"
-        [(ngModel)]="q9"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+        <div class="neck">
+          <h2>Neck</h2>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Carotid Pulse: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">JVD: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Trachea Midline: </label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
 
-      <label for="q10" class="form-label"
-        >Do you engage in exercise? What types of exercises do you do?</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q10"
-        [(ngModel)]="q10"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+        <div class="chest">
+          <h2>Chest</h2>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Trachea Midline: </label>
+            <select class="me-3">
+              <option value="Muffled">Muffled</option>
+              <option value="Arrythmia">Arrythmia</option>
+              <option value="None">None</option>
+            </select>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Trachea Midline: </label>
+            <select class="me-3">
+              <option value="Anterior">Anterior</option>
+              <option value="Posterior">Posterior</option>
+              <option value="Lateral">Lateral</option>
+              <option value="None">None</option>
+            </select>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Chest Symmetry: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Skin Turgor(Clavicle): </label>
+            <input type="text" name="" id="" />
+          </div>
+        </div>
 
-      <label for="q11" class="form-label"
-        >How much sleep do you get each night, and do you feel rested when you
-        awaken? Kindly describe your sleeping patterns.</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q11"
-        [(ngModel)]="q11"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
-      <label for="q12" class="form-label"
-        >Do you drink any kind of alcohol? If so, how much do you drink on
-        average and when was the last time you drank?</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q12"
-        [(ngModel)]="q12"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+        <div class="flexrow">
+          <div class="rom">
+            <h2>ROM</h2>
+            <div>
+              <input type="checkbox" class="me-2" />
+              <label for="" class="me-3">Upper R: </label>
+              <input type="text" name="" id="" style="width: 60px" />
+            </div>
+            <div>
+              <input type="checkbox" class="me-2" />
+              <label for="" class="me-3">Lower R: </label>
+              <input type="text" name="" id="" style="width: 60px" />
+            </div>
 
-      <label for="q13" class="form-label"
-        >Do you currently or have you ever smoked cigarettes or any other form
-        of nicotine? How long have you been smoking/did you smoke?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q13"
-        [(ngModel)]="q13"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+            <div>
+              <input type="checkbox" class="me-2" />
+              <label for="" class="me-3">Upper L: </label>
+              <input type="text" name="" id="" style="width: 60px" />
+            </div>
 
-      <label for="q14" class="form-label"
-        >Have you ever used, or do you now use, recreational drugs?</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q14"
-        [(ngModel)]="q14"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+            <div>
+              <input type="checkbox" class="me-2" />
+              <label for="" class="me-3">Lower L: </label>
+              <input type="text" name="" id="" style="width: 60px" />
+            </div>
+          </div>
 
-      <label for="q15" class="form-label"
-        >For females, at what age did you have your first menstruation? When was
-        your last menstrual period?
-      </label>
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q15"
-        [(ngModel)]="q15"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+          <div class="str">
+            <h2>Strength</h2>
+            <div>
+              <input type="checkbox" class="me-2" />
+              <label for="" class="me-3">Upper R: </label>
+              <input type="text" name="" id="" style="width: 60px" />
+            </div>
+            <div>
+              <input type="checkbox" class="me-2" />
+              <label for="" class="me-3">Lower R: </label>
+              <input type="text" name="" id="" style="width: 60px" />
+            </div>
 
-      <label for="q16" class="form-label"
-        >Do you practice safe sex? Indicate what kinds of contraceptive or
-        natural methods you use.</label
-      >
-      <input
-        type="text"
-        class="form-control"
-        formControlName="q16"
-        [(ngModel)]="q16"
-      />
-      <div *ngIf="validField" class="alert alert-danger">
-        Field is Required!
-      </div>
+            <div>
+              <input type="checkbox" class="me-2" />
+              <label for="" class="me-3">Upper L: </label>
+              <input type="text" name="" id="" style="width: 60px" />
+            </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
+            <div>
+              <input type="checkbox" class="me-2" />
+              <label for="" class="me-3">Lower L: </label>
+              <input type="text" name="" id="" style="width: 60px" />
+            </div>
+          </div>
+        </div>
+
+        <div class="pain">
+          <h2>Pain Assessment</h2>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Acute/Chronic Intensity: </label>
+            <select>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Location: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Duration: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Characteristics: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Precipitation: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Frequency: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Non-Verbals: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Relief Factors: </label>
+            <input type="text" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Sleep: </label>
+            <input type="text" name="" id="" />
+          </div>
+
+          <h2>Skin Assessment</h2>
+          <textarea
+            name=""
+            id=""
+            cols="40"
+            rows="6"
+            placeholder="Place description here"
+          ></textarea>
+        </div>
+      </div>
+      <button type="submit" style="width: 100%;" class="btn btn-primary">Submit</button>
     </form>
   </div>
 </div>

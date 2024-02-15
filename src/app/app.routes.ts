@@ -22,7 +22,7 @@ export const routes: Routes = [
   { path:'emr', component: EMRComponent },
   { path:'mar', component: MARComponent },
   { path: 'records/haf', component: HafdisplayComponent },
-  { path: 'health', component: HAFComponent },
+  { path: 'haf', component: HAFComponent },
   { path: 'members/team', component: MembersComponent },
   { path: 'about', component: AboutComponent },
   { path: 'medical-diagnosis', component: NotesComponent },

@@ -1,40 +1,55 @@
 .page-container {
-  background-image: url("/assets/mainbg.jpg");
-  background-color: #293741;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  //display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
+    background-image: url(/assets/mainbg.jpg); // Set the background color as needed
+    padding: 20px; // Adjust padding as needed
+  }
+  
+  .main-container {
+    background-color: rgba(255, 255, 255, 0.8); // Transparent white background
+    border-radius: 10px; // Optional: Add border-radius for rounded corners
+    padding: 20px; // Adjust padding as needed
+  
+    form {
+      // Add form styling if necessary
+      label {
+        // Add label styling if necessary
+      }
+  
+      input[type="text"],
+      input[type="number"],
+      select,
+      textarea {
+        // Add styling for input fields, select, and textarea if necessary
+        width: 80%; // Set the width as needed
+        margin-bottom: 10px; // Adjust margin as needed
+        padding: 8px; // Adjust padding as needed
+        box-sizing: border-box; // Include padding and border in the element's total width and height
+      }
+  
+      button {
+        // Add button styling if necessary
+        padding: 10px; // Adjust padding as needed
+        background-color: #007bff; // Set the background color as needed
+        color: #fff; // Set the text color as needed
+        border: none; // Remove border if not needed
+        border-radius: 5px; // Optional: Add border-radius for rounded corners
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .row1,
+.row2 {
+  display: flex;
+  flex-wrap: wrap;
 
-.main-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.8);
-}
+  > div {
+    flex: 1;
+    min-width: 0; // Allow flex items to shrink past their content's minimum width
+    margin-right: 20px; // Adjust margin between items as needed
+    margin-bottom: 20px; // Adjust margin between rows as needed
 
-.form-label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-control {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.form-control:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    &:last-child {
+      margin-right: 0; // Remove margin for the last item in each row
+    }
+  }
 }
