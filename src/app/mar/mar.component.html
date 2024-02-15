@@ -1,7 +1,9 @@
-<app-navbar></app-navbar>
 <div class="page-container">
+  <a class="btn btn-dark back-button" href="/">
+    Back to Home
+  </a>
   <div class="container">
-    <h2>Medication Administration Record</h2>
+    <!-- <h2>Medication Administration Record</h2> -->
     <form>
       <table class="table table-hover table-sm table-bordered">
         <thead class="headdark">
@@ -81,13 +83,13 @@
       Add New Entry
     </button>
     <button
-      class="btn btn-success me-2 mt-2"
+      class="btn btn-dark me-2 mt-2"
       *ngIf="addMode"
       (click)="submitVital()"
     >
       Submit New Entry
     </button>
-    <button class="btn btn-danger mt-2" *ngIf="addMode" (click)="cancelAdd()">
+    <button class="btn btn-outline-dark mt-2" *ngIf="addMode" (click)="cancelAdd()">
       Cancel
     </button>
   </div>
