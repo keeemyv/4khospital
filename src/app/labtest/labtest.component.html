@@ -1,1 +1,75 @@
-<p>labtest works!</p>
+<div class="page-container">
+     <a class="btn btn-dark back-button" href="/"> Back to Home </a>
+ 
+    <div class="main-container">
+        <form>
+            <label class="mt-3" style="font-weight: bold" for="pName"
+              >Patient Name:</label
+            >
+            <div>
+              <input type="text" name="pName" id="pName" formControlName="pName" />
+            </div>
+            <div class="emr-container mt-3">
+                 
+        
+              <table class="table table-responsive table-striped">
+                <thead>
+                  <tr>
+                      <td style="font-weight: bold;">Test</td>
+                      <td style="font-weight: bold;">Value</td>
+                      <td style="font-weight: bold;">SI Unit</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>WBC Count</td>
+                    <td><input type="number" formControlName="wbc" /></td>
+                    <td>x10^12/L</td>
+                    
+                  </tr>
+                  <tr>
+                    <td>RBC Count</td>
+                    <td><input type="number" formControlName="rbc" /></td>
+                    <td>x10^12/L</td>
+                  </tr>
+                  <tr>
+                    <td>HGB</td>
+                    <td><input type="number" formControlName="hgb" /></td>
+                    <td>%</td>
+                  </tr>
+                  <tr>
+                    <td>HCT</td>
+                    <td><input type="number" formControlName="hct" /></td>
+                    <td>g/L</td>
+                  </tr>
+                  <tr>
+                    <td>RDW</td>
+                    <td><input type="number" formControlName="RDW" /></td>
+                    <td>%</td>
+                  </tr>
+                  <tr>
+                    <td>MCHC</td>
+                    <td><input type="number" formControlName="mchC" /></td>
+                    <td>g/dL</td>
+                  </tr>
+                  <tr>
+                    <td>MCV</td>
+                    <td><input type="number" formControlName="MCV" /></td>
+                    <td>fL</td>
+                  </tr>
+                  <tr>
+                    <td>MCH</td>
+                    <td><input type="number" formControlName="MCH" /></td>
+                    <td>pg</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-success" (click)="onSubmit()">Submit</button>
+          </form>
+    </div>
+    
+  </div>
+  

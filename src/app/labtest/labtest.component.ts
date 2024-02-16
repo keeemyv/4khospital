@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './labtest.component.scss'
 })
 export class LabtestComponent {
-
+  onSubmit(){
+    alert('Form submitted successfully!');
+  }
 }
