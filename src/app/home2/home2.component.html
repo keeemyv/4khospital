@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="container">
-    <div class="row1">
+    <div class="row1 mb-1">
       <span class="frame">🏥</span>
 
       <h1 id="text02">G1S6 HOSPITAL</h1>
@@ -29,10 +29,14 @@
       ></a>
     </div>
 
-    <div class="row2">
+    <div class="row2 mt-5">
       <ul id="buttons01" class="buttons">
         <li>
-          <a (click)="showDemographicOptions = !showDemographicOptions" class="button n01">Demographic profile</a>
+          <a
+            (click)="showDemographicOptions = !showDemographicOptions"
+            class="button n01"
+            >Demographic profile</a
+          >
         </li>
 
         <div *ngIf="showDemographicOptions" class="demographic-options">
@@ -75,5 +79,14 @@
         </li> -->
       </ul>
     </div>
+  </div>
+
+  <div class="row3 mt-5">
+    <p>
+      Alonzo, Sabrina Carmelle || Angeles, Alyssa Ashley || Angeles, Rafael
+      Antonio || Bagtang, Mariel || Baquero, Shekinnah Nicole || Bauzon, Wilmer
+      || Concepcion, Patricia Ann || De Mesa, Trisha Viance || Daria, Nicole
+      Allyson || Dizon, Christine Kaye
+    </p>
   </div>
 </div>

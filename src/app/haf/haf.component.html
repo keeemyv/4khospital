@@ -2,12 +2,38 @@
 <div class="page-container">
   <div class="main-container">
     <form [formGroup]="myForm" #formDirective="ngForm" (ngSubmit)="onSubmit()">
-      <label class="me-2" for="">Patient Name:</label>
-      <input type="text" id="" formControlName="" />
+      <div class="form-group">
+        <label class="me-2" for="">Patient Name:</label>
+        <input type="text" id="" formControlName="" />
+        <div class="form-group">
+          <label for="date">Date:</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            class="form-control"
+            required
+            style="width: 300px"
+          />
 
-      <div>
-        <label class="me-2">Level of Consciousness:</label>
-        <select>
+          <label for="Time" class="mt-2">Time:</label>
+          <input
+            type="time"
+            class="form-control mb-5"
+            style="width: 300px"
+            required
+          />
+
+          <label class="form-label">Doctor In-charge:</label>
+          <input type="text" class="form-control" />
+
+          <label class="form-label">Nurse In-charge:</label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="mb-5">
+        <label class="me-2 mt-5">Level of Consciousness:</label>
+        <select style="width: 300px">
           <option value="alert">Alert</option>
           <option value="drowsy">Drowsy</option>
           <option value="lethargic">Lethargic</option>
@@ -92,6 +118,11 @@
             <input type="checkbox" class="me-2" />
             <label for="" class="me-3">BMI: </label>
             <input type="number" name="" id="" />
+          </div>
+          <div>
+            <input type="checkbox" class="me-2" />
+            <label for="" class="me-3">Allergies: </label>
+            <textarea name="" id="" cols="30" rows="5"></textarea>
           </div>
         </div>
 
@@ -436,7 +467,9 @@
           ></textarea>
         </div>
       </div>
-      <button type="submit" style="width: 100%;" class="btn btn-primary">Submit</button>
+      <button type="submit" style="width: 100%" class="btn btn-primary">
+        Submit
+      </button>
     </form>
   </div>
 </div>

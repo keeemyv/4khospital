@@ -10,6 +10,7 @@
           <tr class="headdark">
             <td><label for="name">Patient Name</label></td>
             <td><label for="meds">Medication</label></td>
+            <td><label for="allergy">Med Allergies</label></td>
             <td><label for="date">Date</label></td>
             <td><label for="time">Time</label></td>
             <td><label for="adm">ADM</label></td>
@@ -20,6 +21,7 @@
           <tr *ngFor="let data of submittedMAR; let i = index">
             <td>{{ data.pname }}</td>
             <td>{{data.meds}}</td>
+            <td>{{data.allergy}}</td>
             <td>{{ data.date }}</td>
             <td>{{ data.time }}</td>
             <td [ngClass]="getADMColorClass(data.adm)">{{ data.adm }}</td>
@@ -43,6 +45,16 @@
                 id="meds"
                 name="meds"
                 [(ngModel)]="formData.meds"
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                class="form-control"
+                id="allergy"
+                name="allergy"
+                [(ngModel)]="formData.allergy"
+                placeholder="Leave blank if none."
               />
             </td>
             <td>

@@ -92,10 +92,28 @@
     text-align: center;
     margin-bottom: 5px; /* Adjust the margin as needed */
   }
-
- 
 }
 
 .n01:hover {
   cursor: pointer;
+}
+
+.row3 {
+  position: absolute;
+  top: 45em;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .team-members {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
 }
