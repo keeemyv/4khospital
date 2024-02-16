@@ -33,7 +33,7 @@ export const routes: Routes = [
   { path: 'about-us', component: AboutComponent },
   { path: 'input', component: IaoComponent },
   { path: 'immunization', component: ImmunizationComponent },
-  { path: 'radio', component: RadioComponent },
+  { path: 'radiology', component: RadioComponent },
   { path: 'labtest', component: LabtestComponent },
   { path: '**', redirectTo: '' },
 ];

@@ -1,8 +1,10 @@
+
+
 .page-container {
   background-image: url("/assets/mainbg.jpg"); /* Path to your background image */
-//   background-size: cover;
+  background-size: cover;
   background-position: center;
-  min-height: 100vh; 
+  // min-height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +30,8 @@
 
   .main-container {
     max-width: 800px;
-    margin: 0 auto;
+  
+    // margin: 0 auto;
     padding: 20px;
     // position: relative;
     border-radius: 5px;

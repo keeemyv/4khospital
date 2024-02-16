@@ -32,10 +32,22 @@
     <div class="row2">
       <ul id="buttons01" class="buttons">
         <li>
-          <a href="/forms" class="button n01">Demographic profile</a>
+          <a (click)="showDemographicOptions = !showDemographicOptions" class="button n01">Demographic profile</a>
         </li>
+
+        <div *ngIf="showDemographicOptions" class="demographic-options">
+          <li>
+            <a href="/forms" class="button n01">Register</a>
+          </li>
+          <li>
+            <a href="/records/registrations" class="button n01">Records</a>
+          </li>
+        </div>
+
         <li>
-          <a href="/medical-diagnosis" class="button n02">Medical History & Diagnosis</a>
+          <a href="/medical-diagnosis" class="button n02"
+            >Medical History & Diagnosis</a
+          >
         </li>
         <!-- <li>
           <a href="#" class="button n03">s</a>
@@ -53,7 +65,7 @@
           <a href="/input" class="button n07">Input and Output</a>
         </li>
         <li>
-          <a href="/immunizations" class="button n08">Immunizations</a>
+          <a href="/immunization" class="button n08">Immunizations</a>
         </li>
         <li>
           <a href="/labtest" class="button n09">Laboratory and Test Results</a>

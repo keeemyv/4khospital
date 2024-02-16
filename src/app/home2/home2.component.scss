@@ -78,3 +78,24 @@
     }
   }
 }
+.demographic-options {
+  margin-top: 10px; /* Adjust the margin as needed */
+  // padding: 5px; /* Adjust the padding as needed */
+  // border: 1px solid #ccc; /* Add a border for better visibility */
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  // background-color: #f9f9f9; /* Optional: Add a background color */
+  max-width: 200px; /* Set a maximum width for the options */
+  overflow: hidden; /* Hide any content that exceeds the specified width */
+
+  li {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px; /* Adjust the margin as needed */
+  }
+
+ 
+}
+
+.n01:hover {
+  cursor: pointer;
+}

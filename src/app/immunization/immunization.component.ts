@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './immunization.component.scss'
 })
 export class ImmunizationComponent {
-
+  onSubmit() {
+    alert('Form has been submitted successfully!');
+  }
 }

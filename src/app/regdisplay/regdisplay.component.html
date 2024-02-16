@@ -1,11 +1,13 @@
-<app-navbar></app-navbar>
 <div class="page-container">
+  <a class="btn btn-dark back-button" href="/">
+    Back to Home
+  </a>
   <div class="container">
-    <h2>Registered Users</h2>
+    <h2>Registered Profiles</h2>
     <!-- <button class="btn btn-danger" (click)="clearSubmittedForms()">
           Clear All Data
         </button> -->
-    <table class="table table-striped">
+    <table class="table table-responsive table-hover" >
       <thead>
         <tr>
           <th>Last Name</th>
@@ -15,8 +17,8 @@
           <th>Religion</th>
           <th>Contact Number</th>
           <th>Address</th>
-          <th class="red">Emergency Contact</th>
-          <th class="red">Emergency Number</th>
+          <th>Emergency Contact</th>
+          <th>Emergency Number</th>
           <!-- Add more headers for other form fields -->
         </tr>
       </thead>

@@ -1,1 +1,81 @@
-<p>immunization works!</p>
+<div class="page-container">
+  <a class="btn btn-dark back-button" href="/"> Back to Home </a>
+  <div class="main-container">
+    <form (submit)="onSubmit()" class="my-4">
+      <div class="form-group">
+        <label for="name">Patient Name:</label>
+        <input type="text" />
+      </div>
+
+      <div class="form-group">
+        <label for="text">Email:</label>
+        <input type="email" />
+        <label for="text" class="mt-2">Phone Number:</label>
+        <input type="number" />
+        <label for="text" class="mt-2">Date of Birth:</label>
+        <input type="date" />
+      </div>
+
+      <div class="form-group">
+        <label for="text">Medical Notes:</label>
+        <textarea name="" id="" cols="40" rows="5"></textarea>
+      </div>
+
+      <div class="row222">
+        <label for="text"><strong>Vaccine:</strong></label>
+        <div class="row1">
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Hepatitis B</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Hepatitis A</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Diptheria, Tetanus,
+            Pertussis</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Haemophilus Influenzae Type
+            B</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Pneumococcal</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Pollo</label
+          >
+
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Rotavirus</label
+          >
+        </div>
+        <div class="row2">
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Measles, Mumps &
+            Rubella</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Varicella</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Meningococcal</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Human papillomavirus</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Zoster</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Influenza</label
+          >
+          <label for="" class="me-3"
+            ><input type="checkbox" class="me-2" />Other: <input type="text"
+          /></label>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary submit mt-3">Submit</button>
+    </form>
+  </div>
+</div>
