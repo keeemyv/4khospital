@@ -1,13 +1,11 @@
-
-
 .page-container {
-  background-image: url("/assets/mainbg.jpg"); /* Path to your background image */
+  background-image: url("/assets/mainbg.jpg");
   background-size: cover;
   background-position: center;
-  // min-height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 
   .back-button {
     position: absolute;
@@ -18,22 +16,20 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #333; /* Background color for the back button */
-    text-decoration: none; /* Remove default link underline */
+    background-color: #333;
+    text-decoration: none;
     font-size: 14px;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #555; /* Change background color on hover */
+      background-color: #555;
     }
   }
 
   .main-container {
     max-width: 800px;
-  
-    // margin: 0 auto;
+    margin: 10px auto;
     padding: 20px;
-    // position: relative;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.8);
@@ -48,7 +44,8 @@
         }
 
         input,
-        select {
+        select,
+        textarea {
           width: 100%;
           padding: 8px;
           border: 1px solid #ccc;
@@ -79,6 +76,21 @@
 
     .div {
       margin-bottom: 20px;
+    }
+
+    .row1,
+    .row2 {
+      display: flex;
+      justify-content: space-between;
+
+      .form-group {
+        flex: 1;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
 }

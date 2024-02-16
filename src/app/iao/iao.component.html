@@ -5,44 +5,66 @@
       <div class="form-group">
         <label for="name">Patient Name:</label>
         <input type="text" />
+        <div class="form-group">
+          <label for="blood">Blood Type:</label>
+          <select name="" id="">
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+        </div>
+  
+      </div>
+
+      <div class="row1">
+        
+        <div class="form-group">
+          <h2>IV FLUID PRESCRIPTION (INTAKE)</h2>
+          <label for="text">Fluid Type:</label>
+          <input type="text" />
+          <label for="text" class="mt-2">Volume:</label>
+          <input type="text" />
+          <label for="text" class="mt-2">Rate:</label>
+          <input type="text" />
+          <label for="text" class="mt-2">Indication for IV Fluids:</label>
+          <input type="text" />
+          <label for="text" class="mt-2">Instructions:</label>
+          <input type="text" placeholder="Enter specific instructions.." />
+        </div>
+  
+        <div class="form-group">
+          <h2>IV FLUID PRESCRIPTION (OUTPUT)</h2>
+          <label for="text">Amount absorbed:</label>
+          <input type="text" />
+          <label for="text" class="mt-2">Urine:</label>
+          <input type="text" />
+          <label for="text" class="mt-2">Stool:</label>
+          <input type="text" />
+          <label for="text" class="mt-2">Others:</label>
+          <input type="text" placeholder="Please specify.."/>
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="blood">Blood Type:</label>
-        <select name="" id="">
-          <option value="O+">O+</option>
-          <option value="O-">O-</option>
-          <option value="A+">A+</option>
-          <option value="A-">A-</option>
-          <option value="B+">B+</option>
-          <option value="B-">B-</option>
-          <option value="AB+">AB+</option>
-          <option value="AB-">AB-</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <h2>IV FLUID PRESCRIPTION (INTAKE)</h2>
-        <label for="text">Fluid Type:</label>
-        <input type="text" />
-        <label for="text" class="mt-2">Volume:</label>
-        <input type="text" />
-        <label for="text" class="mt-2">Rate:</label>
-        <input type="text" />
-        <label for="text" class="mt-2">Indication for IV Fluids:</label>
-        <input type="text" />
-        <label for="text" class="mt-2">Instructions:</label>
-        <input type="text" />
-      </div>
-
-      <div class="form-group">
-        <h2>IV FLUID PRESCRIPTION (OUTPUT)</h2>
-        <label for="text">Amount absorbed:</label>
-        <input type="text" />
-        <label for="text" class="mt-2">Urine:</label>
-        <input type="text" />
-        <label for="text" class="mt-2">Others:</label>
-        <input type="text" placeholder="Please specify.."/>
+        <label for="text" class="mt-2">Assessment:</label>
+        <textarea type="text" placeholder="Include any relevant assessment findings related to the patient's response to IV fluids" cols="60" rows="3"></textarea>
+        <label for="text" class="mt-2">Provider Notes:</label>
+        <textarea type="text" placeholder="Include any notes or observations made by the healthcare provider regarding the IV fluid administration and patient's response" cols="60" rows="3"></textarea>
+        <label for="text" class="mt-2">Lab Results:</label>
+        <textarea type="text" placeholder="Include any relevant laboratory results that may influence IV fluid management" cols="60" rows="3"></textarea>
+        <label for="text" class="mt-2">Medications:</label>
+        <textarea type="text" placeholder="Include any medications administered concurrently with IV fluids" cols="60" rows="3"></textarea>
+        <label for="text" class="mt-2">Allergies:</label>
+        <textarea type="text" placeholder="Include any known allergies to medications or substances" cols="60" rows="3"></textarea>
+        <label for="text" class="mt-2">Plan:</label>
+        <textarea type="text" placeholder="Outline the plan for continued monitoring and management of IV fluids, including any adjustments to fluid type, rate, or volume" cols="60" rows="3"></textarea>
+        <label for="text" class="mt-2">Follow-Up:</label>
+        <textarea type="text" placeholder="Specify any follow-up instructions or appointments related to IV fluid administration" cols="60" rows="3"></textarea>
       </div>
 
       <button type="submit" class="btn btn-primary submit">Submit</button>
